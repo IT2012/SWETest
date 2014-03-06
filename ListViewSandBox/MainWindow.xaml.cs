@@ -20,6 +20,7 @@ using TreeView = System.Windows.Controls.TreeView;
 namespace ListViewSandBox
 {
     //LALAAA
+    //TEST2 von benni
     public partial class MainWindow : Window, INotifyPropertyChanged
     {
         public double _testEntropie = 0;
