@@ -21,6 +21,7 @@ namespace ListViewSandBox
 {
     //LALAAA
     //TEST2 von benni
+	//TEST3 von benni
     public partial class MainWindow : Window, INotifyPropertyChanged
     {
         public double _testEntropie = 0;
