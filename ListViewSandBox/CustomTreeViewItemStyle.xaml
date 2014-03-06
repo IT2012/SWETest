@@ -1,0 +1,39 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Style TargetType="TreeViewItem">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="TreeViewItem">
+                    <Grid Margin="2">
+                        <Grid.RowDefinitions>
+                            <!--Parent row-->
+                            <RowDefinition Height="Auto" />
+                            <!--Children row-->
+                            <RowDefinition Height="*" />
+                        </Grid.RowDefinitions>
+                        <!--ContentPresenter displays the content of the Parent-->
+                        <ContentPresenter Name="PART_Header"
+                                          ContentSource="Header"
+                                          Margin="20,10,20,10"
+                                          HorizontalAlignment="Center"
+                                          VerticalAlignment="Center"/>
+                        <!--ItemsPresenter displays the item's children-->
+                        <ItemsPresenter Grid.Row="1"
+                                        Margin="20,10,20,10"/>
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+
+        <!--Show Children in horizontal StackPanel-->
+        <Setter Property="ItemsPanel">
+            <Setter.Value>
+                <ItemsPanelTemplate>
+                    <StackPanel HorizontalAlignment="Center"
+                                Orientation="Horizontal"
+                                IsItemsHost="True"/>
+                </ItemsPanelTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+</ResourceDictionary>
